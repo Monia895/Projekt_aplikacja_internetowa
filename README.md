@@ -103,18 +103,22 @@ Baza danych PostgreSQL zostanie automatycznie zainicjalizowana strukturą tabel,
 
 Wszystkie dane wrażliwe oraz konfiguracja usług znajdują się w pliku `.env` (plik jest ignorowany przez Gita). W repozytorium znajduje się bezpieczny szablon `.env.example`:
 
-| Zmienna | Opis | Przykładowa wartość (lokalna) |
+| Zmienna | Opis | Przykładowa wartość |
 |---|---|---|
 | `APP_ENV` | Środowisko uruchomieniowe | `development` |
 | `APP_PORT` | Port serwera HTTP Nginx | `8080` |
-| `DB_HOST` | Nazwa usługi bazy danych w sieci Docker | `db` |
-| `DB_PORT` | Wewnętrzny port PostgreSQL | `5432` |
-| `DB_NAME` | Nazwa bazy danych | `skinharmony` |
-| `DB_USER` | Użytkownik bazy danych | `skinharmony_user` |
-| `DB_PASS` | Hasło bazy danych | `secret_local_pass` |
-| `MAIL_HOST` | Host serwera SMTP (Mailpit) | `mailpit` |
-| `MAIL_PORT` | Port SMTP | `1025` |
-| `UPLOAD_DIR` | Ścieżka zapisu przesyłanych zdjęć | `/var/www/html/storage/uploads` |
+| `POSTGRES_HOST` | Nazwa usługi bazy danych w sieci Docker | `db` |
+| `POSTGRES_PORT` | Port PostgreSQL wystawiony na hosta | `5433` |
+| `POSTGRES_DB` | Nazwa bazy danych | `skinharmony` |
+| `POSTGRES_USER` | Użytkownik bazy danych | `skinharmony_user` |
+| `POSTGRES_PASSWORD` | Hasło bazy danych | `secret_local_password` |
+| `MAIL_HOST` | Host serwera SMTP w sieci Docker | `mailpit` |
+| `MAIL_PORT` | Port SMTP do wysyłki z PHP | `1025` |
+| `MAILPIT_PORT` | Port panelu WWW Mailpit | `8025` |
+| `PGADMIN_PORT` | Port panelu WWW pgAdmin | `5050` |
+| `PGADMIN_DEFAULT_EMAIL` | Login do pgAdmin | `admin@skinharmony.local` |
+| `PGADMIN_DEFAULT_PASSWORD` | Hasło do pgAdmin | `secret_admin_password` |
+| `UPLOAD_DIR` | Ścieżka zapisu przesyłanych zdjęć | `/app/storage/uploads` |
 
 ---
 
